@@ -5,9 +5,9 @@ services:
     image: postgres:15
     container_name: postgres_db
     environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydb
+      POSTGRES_USER: neondb_owner
+      POSTGRES_PASSWORD: npg_w1hrGj2pYxTJ
+      POSTGRES_DB: neondb  
     ports:
       - '5432:5432'
     volumes:
@@ -19,7 +19,7 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - DATABASE_URL: postgresql://myuser:mypassword@[YOUR_SERVER_IP]:5432/mydb
+      - DATABASE_URL: postgresql://neondb_owner:npg_w1hrGj2pYxTJ@ep-soft-meadow-a8lrm0eq-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
     depends_on:
       - postgres
 
