@@ -19,7 +19,7 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - DATABASE_URL: postgresql://myuser:mypassword@[YOUR_SERVER_IP]:5432/mydb
+      - DATABASE_URL: postgresql://neondb_owner:npg_w1hrGj2pYxTJ@ep-soft-meadow-a8lrm0eq-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
     depends_on:
       - postgres
 
